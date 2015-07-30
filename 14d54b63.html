@@ -79,6 +79,9 @@
                     <td valign="middle" align="left">&nbsp;&nbsp;<span>温度</span><br/>&nbsp;&nbsp;<span class="tempcls" id="tempid">28℃</span></td>
                     <td valign="middle" align="right"><img src="./image/01-humidity.svg" alt=""></td>
                     <td valign="middle" align="left">&nbsp;&nbsp;<span>湿度</span><br/>&nbsp;&nbsp;<span class="humicls" id="humiid">42%</span></td>
+                  
+                     <td valign="middle" align="right"><img src="./image/01-humidity.svg" alt=""></td>
+                    <td valign="middle" align="left">&nbsp;&nbsp;<span>光照</span><br/>&nbsp;&nbsp;<span class="humicls" id="lightid">42%</span></td>
                 </tr>
             </table>
         </div>        
@@ -173,8 +176,12 @@
             msgjson = $.parseJSON(message.payloadString);
             // console.log('温度 ' +  msgjson.dht11_temperature);
             var tempval = msgjson.dht11_temperature;
+            var lightval = msgjson.light;
             // console.log('温度2 ' +  tempval);
             if("undefined" != typeof(tempval)){
+                // 显示光照
+                $("#lightid").text(light+" " );
+                
                 // 显示温度
                 $("#tempid").text(tempval+"℃");
                 // 显示湿度
