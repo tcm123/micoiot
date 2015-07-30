@@ -80,8 +80,8 @@
                     <td valign="middle" align="right"><img src="./image/01-humidity.svg" alt=""></td>
                     <td valign="middle" align="left">&nbsp;&nbsp;<span>湿度</span><br/>&nbsp;&nbsp;<span class="humicls" id="humiid">42%</span></td>
                   
-                     <td valign="middle" align="right"><img src="./image/01-humidity.svg" alt=""></td>
-                    <td valign="middle" align="left">&nbsp;&nbsp;<span>光照</span><br/>&nbsp;&nbsp;<span class="humicls" id="lightid">42%</span></td>
+                     <td valign="middle" align="right"><img src="./image/01-temperature.svg" alt=""></td>
+                    <td valign="middle" align="left">&nbsp;&nbsp;<span>光照</span><br/>&nbsp;&nbsp;<span class="humicls" id="lightid"></span></td>
                 </tr>
             </table>
         </div>        
@@ -180,7 +180,7 @@
             // console.log('温度2 ' +  tempval);
             if("undefined" != typeof(tempval)){
                 // 显示光照
-                $("#lightid").text(light+" " );
+                $("#lightid").text(lightval+" " );
                 
                 // 显示温度
                 $("#tempid").text(tempval+"℃");
